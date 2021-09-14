@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/wxing1292/fx/common/cache"
 	"github.com/wxing1292/fx/common/logger"
 	"github.com/wxing1292/fx/common/metrics"
 	"github.com/wxing1292/fx/common/service"
@@ -10,6 +11,7 @@ import (
 var ServiceModule = fx.Options(
 	logger.Module,
 	metrics.Module,
+	cache.Module,
 	service.Module,
 )
 
