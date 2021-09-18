@@ -40,6 +40,7 @@ var SpecialMetrics = fx.Options(
 	// annotate metrics constructor with above annotation
 	fx.Provide(fx.Annotate(metrics.NewMetrics, fx.ParamTags(
 		`name:"metrics-logger"`,
+		``,
 	))),
 	// remaining binding for metrics
 	fx.Provide(metrics.ModuleBind),

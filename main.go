@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/wxing1292/fx/common/cache"
+	"github.com/wxing1292/fx/common/dummy"
 	"github.com/wxing1292/fx/common/logger"
 	"github.com/wxing1292/fx/common/service"
 	"go.uber.org/fx"
@@ -12,6 +13,7 @@ var ServiceModule = fx.Options(
 	logger.Module,
 	cache.Module,
 	service.Module,
+	dummy.Module,
 	fx.NopLogger, // disable FX's own noizy logger
 )
 
