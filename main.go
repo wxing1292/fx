@@ -3,16 +3,16 @@ package main
 import (
 	"github.com/wxing1292/fx/common/cache"
 	"github.com/wxing1292/fx/common/logger"
-	"github.com/wxing1292/fx/common/metrics"
 	"github.com/wxing1292/fx/common/service"
 	"go.uber.org/fx"
 )
 
 var ServiceModule = fx.Options(
+	SpecialMetrics, // metrics.Module,
 	logger.Module,
-	metrics.Module,
 	cache.Module,
 	service.Module,
+	fx.NopLogger, // disable FX's own noizy logger
 )
 
 func main() {

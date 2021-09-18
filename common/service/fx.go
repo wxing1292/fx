@@ -17,6 +17,7 @@ func lifecycleHooks(
 ) *ServiceImpl {
 	lc.Append(fx.Hook{
 		OnStart: func(context.Context) error {
+			service.logger.Info("logger from service say hi")
 			return service.Start()
 		},
 		OnStop: func(ctx context.Context) error {

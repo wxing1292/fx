@@ -10,7 +10,7 @@ type (
 
 type (
 	MetricsImpl struct {
-		logger logger.Logger
+		Logger logger.Logger
 	}
 )
 
@@ -18,7 +18,7 @@ func NewMetrics(
 	logger logger.Logger,
 ) (*MetricsImpl, error) {
 	return &MetricsImpl{
-		logger: logger,
+		Logger: logger,
 	}, nil
 }
 
